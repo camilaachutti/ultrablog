@@ -1,0 +1,44 @@
+@import '_mixins';
+
+$body-color: black;
+$link-color: #453BB3;
+$btn-background-color: #b37399;
+$btn-font-color: white;
+
+body {
+  font-family: "helvetica", "arial", "sans-serif";
+  color: $body-color;
+}
+
+.header {
+  padding: 10px;
+  background-color: #453BB3;
+
+  a {
+    color: white;
+  }
+}
+
+.content {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn, input[type=submit] {
+  @include border-radius(3px);
+  background-color: $btn-background-color;
+  color: $btn-font-color;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #b373CC;
+  }
+}
